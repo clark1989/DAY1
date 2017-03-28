@@ -1,0 +1,19 @@
+[root@vm2 day3]# cat pwd_hanshu.py
+#!/usr/bin/env python 
+import random
+import string
+
+all_chs = string.letters + string.digits
+
+def gen_pass(num=8):
+	pwd = ''
+	
+	for i in range(num):
+		ch = random.choice(all_chs)
+		pwd += ch
+	return pwd
+
+if __name__ == '__main__':
+	print gen_pass(4)
+	print gen_pass()
+	print gen_pass(12)
