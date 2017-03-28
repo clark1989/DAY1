@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+
+import getpass
+
+username = raw_input("username: ")
+password = getpass.getpass("password: ")
+
+if username == "clark" and password == "1234":
+	print "login successful!"
+else:
+	print "login fail!"
